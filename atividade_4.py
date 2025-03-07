@@ -72,17 +72,17 @@ class Recebimento_financeiro(Transacao):
             print(f'O {self.nome} nao transferiu')
 
     def ressebeu_ou_nao(self):
-        if not self.fome:
+        if not self.tem_dinheiro:
             print(' funcionou')
         else:
-            self.fome = False
-            self.chorando = False
+            self.tem_dinheiro = False
+            self.recebeu = False
             print(f'{self.nome} nao funcionou')
             print('funcionou')
 
     def dormir(self):
-        if not self.fome:
-            self.dormindo = True
+        if not self.tem_dinheiro:
+            self.recebeu = True
             print('bebe foi dormir')
         else:
             print('bebe está com fome não pode dormir')
